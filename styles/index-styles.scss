@@ -1,0 +1,215 @@
+@import 'mixins';
+@import 'color';
+
+.picture-over-content-container {
+    width: 100%;
+    background-image: url(https://wp-themes.com/wp-content/themes/hestia/assets/img/parallax_1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 0;
+
+    .picture-over-content {
+        background-image: url(https://wp-themes.com/wp-content/themes/hestia/assets/img/parallax_2.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 80vh;
+        width: 100%;
+        z-index: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .center-content {
+            background-color: rgba(0, 0, 0, 0.404);
+            width: 100vw;
+            height: 100vh;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: $secondary-color-text;
+            z-index: 2;
+
+            h1 {
+                font-size: 3.5rem;
+                margin-bottom: 20px;
+            }
+
+            p {
+                font-size: 1.5rem;
+                margin-bottom: 20px;
+            }
+
+            button {
+                background-color: $primary-color-button;
+                color: $secondary-color-text;
+                border: none;
+                padding: 10px 20px;
+                border-radius: 5px;
+                cursor: pointer;
+                transition: background-color 0.3s ease;
+
+                &:hover {
+                    background-color: darken($primary-color-button, 10%);
+                }
+            }
+        }
+    }
+}
+
+.main-container {
+    background-color: $secondary-color-text;
+    width: 95%;
+    box-shadow: 0px 0px 20px 20px rgba(0, 0, 0, 0.452);
+    border-radius: 25px;
+    margin-left: 2%;
+    margin-top: -2%;
+
+    .grid-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-image: url('https://wp-themes.com/wp-content/themes/hestia/assets/img/contact.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 100%;
+
+        .title {
+            padding-top: 2%;
+            z-index: 3;
+            background-color: $secondary-color-text;
+            text-align: center;
+            width: 100%;
+        }
+
+        .main {
+            border-radius: 25px 25px 0px 0px;
+        }
+
+        .grid-group {
+            z-index: 3;
+            @include grid-container;
+            background-color: $secondary-color-text;
+
+            .group1,
+            .group2,
+            .group3 {
+                text-align: center;
+                width: 65%;
+                margin: 12%;
+
+                a {
+                    text-decoration: none;
+
+                    &:hover {
+                        transition: 0.65s;
+                        color: $color-option-1;
+                    }
+                }
+
+                .service-content {
+                    color: #0000003f;
+                    font-size: 12px;
+                }
+
+                p {
+                    color: $secondary-color;
+                    font-size: 15px;
+                }
+
+                .service-color-1,
+                .service-color-2,
+                .service-color-3 {
+                    font-size: 10px;
+                }
+
+                .blog-color-1 {
+                    color: $color-option-4;
+                }
+
+                .blog-color-2 {
+                    color: $color-option-5;
+                }
+
+                .blog-color-3 {
+                    color: $color-option-1;
+                }
+            }
+        }
+
+        .float-container {
+            background-color: rgba(0, 0, 0, 0.404);
+            width: 100%;
+
+            .about-section {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                color: $primary-color;
+                width: 70%;
+                margin-left: 10%;
+                padding: 2%;
+
+                .about-content {
+                    flex: 1;
+                    max-width: 100%;
+                    height: auto;
+                    padding: 2% 3% 3% 2%;
+                }
+
+                .about-picture {
+                    flex: 1;
+                    display: flex;
+                    justify-content: center;
+                    height: 30vh;
+                    min-width: 50vh;
+
+                    img {
+                        max-width: 100%;
+                        max-height: 100%;
+                        transform: rotate(5deg) rotateX(40deg);
+                    }
+                }
+            }
+        }
+    }
+
+    .get-in-touch {
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-image: url(https://wp-themes.com/wp-content/themes/hestia/assets/img/contact.jpg);
+        width: 100%;
+        height: 60vh;
+
+        .touch-content {
+            color: $secondary-color-text;
+            height: inherit;
+            background-color: rgba(0, 0, 0, 0.503);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            padding-left: 200px;
+
+            h1 {
+                color: $secondary-color-text;
+                padding-bottom: 40px;
+            }
+
+            h3 {
+                padding-top: 20px;
+            }
+
+            p {
+                color: rgba(255, 255, 255, 0.548);
+                padding-top: 20px;
+            }
+        }
+    }
+}
