@@ -23,7 +23,7 @@
         align-items: center;
 
         .center-content {
-            background-color: rgba(0, 0, 0, 0.404);
+            background-color: $secondary-color;
             width: 100vw;
             height: 100vh;
             text-align: center;
@@ -62,10 +62,9 @@
 }
 
 .main-container {
-    background-color: $secondary-color-text;
+    background-color: $primary-color;
     width: 95%;
-    box-shadow: 0px 0px 20px 20px rgba(0, 0, 0, 0.452);
-    border-radius: 25px;
+    box-shadow: 0px 0px 20px 20px $box-shadow;
     margin-left: 2%;
     margin-top: -2%;
 
@@ -82,7 +81,7 @@
         .title {
             padding-top: 2%;
             z-index: 3;
-            background-color: $secondary-color-text;
+            background-color: $primary-color;
             text-align: center;
             width: 100%;
         }
@@ -94,7 +93,7 @@
         .grid-group {
             z-index: 3;
             @include grid-container;
-            background-color: $secondary-color-text;
+            background-color: $primary-color;
 
             .group1,
             .group2,
@@ -113,7 +112,7 @@
                 }
 
                 .service-content {
-                    color: #0000003f;
+                    color: $over-container-color;
                     font-size: 12px;
                 }
 
@@ -143,7 +142,7 @@
         }
 
         .float-container {
-            background-color: rgba(0, 0, 0, 0.404);
+            background-color: $secondary-color;
             width: 100%;
 
             .about-section {
@@ -190,7 +189,7 @@
         .touch-content {
             color: $secondary-color-text;
             height: inherit;
-            background-color: rgba(0, 0, 0, 0.503);
+            background-color: $over-container-color;
             display: flex;
             flex-direction: column;
             justify-content: center;

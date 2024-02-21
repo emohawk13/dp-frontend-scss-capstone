@@ -10,16 +10,15 @@ body {
     padding: 120px 15px 50px 15px; 
     height: auto;
     color: white;
-    background: linear-gradient(45deg,rgba(168,29,132,1) 0,rgb(234,57,111) 100%);
+    background: linear-gradient(45deg, $secondary-page-banner-color 0, $secondary-page-banner-color-2 100%);
     .heading {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @include center-content
     }
 }
 
 .space {
-    background-color: $card-background;
+    background-color: $secondary-color;
+    margin-top: -10%;
 }
 
 .other-container {
@@ -30,22 +29,20 @@ body {
     .container-items {
         display: flex;
         flex-direction: column;
-        border: blue solid 2px;
+        margin: 10% 5% 5% 5%;
         .items {
             justify-content: center;
             align-items: center;
-            padding: 2%;
+            padding: 10%;
             border: red solid 2px;
+            
         }
         .content {
             display: block;
             margin: 0 0 10px;
             font-size: 14px;
-            color: $card-description;
-            margin-block-start: 1em;
-            margin-block-end: 1em;
-            margin-inline-start: 0px;
-            margin-inline-end: 0px;
+            color: $primary-color-text;
+            margin: 10px 0;
         }
     }
 }
