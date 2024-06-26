@@ -1,0 +1,50 @@
+@import 'color';
+@import 'mixins';
+
+.main-container {
+    .content-other-page {
+        h3:first-child{
+            font-weight: 100;
+        }
+        .line {
+            padding-top: 2%;
+            width: 100%;
+            background-color: transparent;
+            border-bottom: 1px solid $secondary-color;
+        }
+        p {
+            font-weight: 100;
+            color: $text-color-3;
+        }
+        a {
+            color: $a-text-color-1;
+        }
+    }
+}
+
+form {
+    padding: 1%;
+    fieldset{
+        @include flex-row(column, flex-start, flex-start);
+        border: none;
+    }
+    .text {
+        @include flex-row(column, flex-start, flex-start);
+        padding-bottom: 1%;
+        width: 90%;
+        input, textarea {
+            border: none;
+            background-color: inherit;
+            border-bottom: 1px black solid;
+            width: 80%;
+        }
+    }
+}
+
+table {
+    width: 100%;
+    td, th {
+        font-size: 1.25rem;
+        border-bottom: 1px black solid;
+    }
+}

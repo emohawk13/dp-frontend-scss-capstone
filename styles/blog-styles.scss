@@ -1,49 +1,24 @@
-@import 'mixins';
-@import 'color';
+@import "color";
 
-body {
-    width: 100%;
-    height: auto;
+@each $key, $color in $blog-colors {
+  .content-other-page:nth-child(#{$key}) h3.blog-color {
+    color: $color;
+  }
 }
 
-.background {
-    padding: 120px 15px 50px 15px; 
-    height: auto;
-    color: white;
-    background: linear-gradient(45deg, $secondary-page-banner-color 0, $secondary-page-banner-color-2 100%);
-    .heading {
-        @include center-content
+.main-container {
+    h2 > a {
+        text-decoration: none;
+        color: $text-color-2;
     }
-}
-
-.space {
-    background-color: $secondary-color;
-    margin-top: -10%;
-}
-
-.other-container {
-    width: 95%;
-    height: auto;
-    background-color: white;
-    margin: 2%;
-    .container-items {
-        display: flex;
-        flex-direction: column;
-        margin: 10% 5% 5% 5%;
-        .items {
-            justify-content: center;
-            align-items: center;
-            padding: 10%;
-            border: red solid 2px;
-            
-        }
-        .content {
-            display: block;
-            margin: 0 0 10px;
-            font-size: 14px;
-            color: $primary-color-text;
-            margin: 10px 0;
-        }
+    border-radius: 15px 15px 0 0;
+  .content-other-page {
+    .blog-color {
+      font-size: 0.75rem;
     }
+    p {
+      color: $secondary-color;
+      font-size: 1rem;
+    }
+  }
 }
-

@@ -1,0 +1,23 @@
+@import 'mixins';
+@import 'color';
+
+p {
+    font-size: 1.25rem;
+    color: $text-color-3;
+}
+
+.user-section {
+    @include flex-row(column, center, center);
+    width: inherit;
+}
+
+
+.smiley {
+    @include flex-row(row);
+    img {
+        padding: 2%;
+        border-radius: 50%;
+        width: 10%;
+    }
+}
+

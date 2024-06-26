@@ -1,0 +1,68 @@
+@import "mixins";
+@import "color";
+
+.message {
+  @include flex-row(column, flex-start, flex-start);
+  h1 {
+    padding: 4% 2% 4% 2%;
+  }
+  input {
+    margin: 4% 2% 4% 2%;
+    min-width: 200px;
+    width: 80%;
+    border: none;
+    border-bottom: 1px solid black;
+    font-size: 1rem;
+  }
+}
+
+i {
+  color: $a-text-color-1;
+  font-size: 1.5rem;
+}
+
+.contact-container{
+  @include flex-row(row);
+  padding: 4%;
+  .message {
+    @include flex-row(column);
+    width: 50%;
+    .submit-contact-button {
+      background-color: $button-color;
+      color: $text-color-1;
+      padding: 3%;
+
+    }
+  }
+  .contact-info {
+    padding-left: 2%;
+    @include flex-row(column, center, flex-start);
+    width: 50%;
+    .title {
+      @include flex-row(row);
+    }
+    p {
+      align-self: flex-start;
+      margin: 0;
+      color: $text-color-3;
+    }
+  }
+  // .company-info{
+  //   @include flex-row;
+  //   display: grid;
+  // grid-template-columns: 1fr 1fr;
+  // grid-template-rows: auto;
+  //   width: 50%;
+  //   .contact-info{
+  //     @include flex-row(column, flex-start, flex-start);
+  //     width: 50%;
+  //     .contact-info-title{
+  //       @include flex-row;
+  //       i {
+  //         color: $a-text-color-1;
+  //         font-size: 1.5rem;
+  //       }
+  //     }
+  //   }
+  // }
+}

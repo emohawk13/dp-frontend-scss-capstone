@@ -1,0 +1,11 @@
+@import "color";
+
+@each $key, $color in $blog-colors {
+  .post-container:nth-child(#{$key}) h4.blog-color {
+    color: $color;
+  }
+}
+
+a {
+  color: $a-text-color-1;
+}

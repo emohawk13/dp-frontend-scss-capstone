@@ -1,88 +1,197 @@
-@import 'mixins';
-@import 'color';
+// Import mixins and variables
+@import "mixins";
+@import "color";
 
-* {
-    margin: 0;
+// General styles
+body,
+html {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
-body {
-    background-color: rgba(0, 0, 0, 0.267);
-    z-index: -1;
-}
+// Navigation menu
+.nav-menu {
+  @include grid-2-col;
+  padding-top: 2%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 8;
+  background-color: transparent;
+  transition: background-color 0.3s ease;
 
-nav {
-    background-color: $secondary-color;
-    height: 55px;
-    width: 100%;
-    position: fixed;
-    top: 0;
-    z-index: 5;
-
-    .nav-links {
-        margin: 0 auto;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        width: 95%;
-        height: 100%;
+  &.scrolled {
+    height: 1%;
+    background-color: white;
+    padding-bottom: 3%;
+    .links a,
+    .logo a {
+      color: $text-color-2;
     }
+  }
 
+  .logo {
+    @include flex-row(row, center);
     a {
-        text-decoration: none;
-        color: $primary-color;
+      text-decoration: none;
+      color: $text-color-1;
     }
+  }
 
-    .logo {
-        font-weight: bold;
-        justify-self: flex-start;
+  .links {
+    @include flex-row(row, center, center);
+    font-size: 0.75em;
+    a {
+      @include flex-row;
+      text-decoration: none;
+      color: $text-color-1;
+      padding: 10px 5px;
+      margin: 0 5px;
+      text-align: center;
+      &:last-child {
+        background-color: $button-color;
+        color: $text-color-1;
+        width: 30px;
+        padding: 2%;
+        border-radius: 25px;
+      }
     }
-
-    .links {
-        display: flex;
-        align-items: flex-end;
-        font-size: 60%;
-        margin-right: 2%;
-
-        a {
-            text-decoration: none;
-            padding: 4%;
-            color: $primary-color;
-            justify-self: flex-end;
-            flex-direction: column;
-
-        }
-        .more {
-            background-color: $primary-color-button;
-            border-radius: 25px;
-            padding: 5px 4px 5px;
-            color: $primary-color;
-        }
-    }
+  }
 }
 
+// Shadowed container with Main container
+.shadow {
+  background-color: $over-container-color;
+
+  .main-container {
+    position: relative;
+    background-color: $primary-color;
+    width: 95%;
+    margin-left: 2%;
+    margin-top: -10%;
+
+    .grid-container {
+      @include flex-row(column, center, center);
+      background-image: url("https://wp-themes.com/wp-content/themes/hestia/assets/img/contact.jpg");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-attachment: fixed;
+      width: 100%;
+
+      .border {
+        border-radius: 15px 15px 0 0;
+      }
+
+      .title {
+        padding-top: 2%;
+        z-index: 3;
+        background-color: $primary-color;
+        text-align: center;
+        width: 100%;
+        font-size: 1.75rem;
+      }
+
+      .grid-group {
+        @include grid-container;
+        background-color: $primary-color;
+
+        .group {
+          text-align: center;
+          width: 65%;
+          margin: 12%;
+          font-size: 1.25rem;
+          a {
+            text-decoration: none;
+
+            &:hover {
+              transition: 0.65s;
+              color: $button-color-hover;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// Title setup for other pages
+.other-layer {
+  position: relative;
+  top: 0;
+  left: 0;
+  height: 50vh;
+  width: 100vw;
+  background: $primary-title-color;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .title-layer {
+    text-align: center;
+    h1 {
+      font-size: 3rem;
+      color: $primary-color;
+      margin: 0;
+    }
+    p {
+      color: $primary-color;
+    }
+  }
+}
+
+.content-other-page {
+  @include flex-row(column, flex-start, flex-start);
+  margin: 0 auto;
+  padding: 5% 2% 2% 5%;
+  width: 80%;
+  &:last-of-type {
+    padding-bottom: 5%;
+  }
+}
+
+.post-title {
+  @include flex-row(column, center, center);
+}
+
+.post-container {
+  @include flex-row(column, flex-start, flex-start);
+  background-color: $primary-color;
+  margin: 0 auto;
+  padding: 5% 2% 2% 5%;
+  width: 80%;
+  margin-bottom: 2%;
+}
+
+.icons {
+  font-size: 3rem;
+}
+
+// Footer styles
 footer {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    background-color: black;
-    width: 100%;
-    height: 60px;
-    position: fixed;
-    bottom: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: black;
+  width: 100%;
+  height: 60px;
+  position: relative;
+  bottom: 0;
 
-    .footer-links {
-        margin-left: 14%;
-    }
+  .footer-links {
+    margin-left: 14%;
+  }
 
-    .footer-links-other {
-        margin-right: 14%;
-    }
-    
-    a{
-        color: white;
-        text-decoration: none;
-        padding: 10px;
-        font-size: 12px;
-    }
+  .footer-links-other {
+    margin-right: 14%;
+  }
+
+  a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    font-size: 12px;
+  }
 }

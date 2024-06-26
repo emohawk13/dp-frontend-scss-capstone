@@ -16,19 +16,16 @@ Flexbox
 Grid
 Hover pseudo-class
 Focus pseudo-class
-Other applicable psuedo-class
+Other applicable pseudo-class
 Media Queries
 Imported fonts
-Font Awsesome Icons
+Font Awesome Icons
 Notes on submissions: Remember to "push" your code to github as you complete small sections. You will submit your live Netlify link to the final product.
 
 https://wordpress.org/themes/hestia/
 
-
 Required Pages
-    main
-    contact
-    blog
-    first three blog
-
-
+    	blog
+	elements
+	2 other pages
+	contact suggested
