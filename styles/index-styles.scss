@@ -1,13 +1,12 @@
-// Import mixins and variables
 @import "mixins";
 @import "color";
 
-// Parallax and picture over container
 .parallax_move {
   width: 100%;
   height: 100vh;
   position: relative;
   overflow: hidden;
+  background-color: $over-container-color;
 
   .layer {
     position: absolute;
@@ -24,16 +23,18 @@
       background-position: center;
       background-size: cover;
       transform: translate3d(-1px, 1px, 0);
+      background-color: $over-container-color;
     }
 
     &.layer2 {
-      position: absolute;
+      @include flex-row(row, center, center);
       z-index: 1;
       background-image: url("https://wp-themes.com/wp-content/themes/hestia/assets/img/parallax_2.png");
       //background-image: url("../images/spongmonkey__quiznos.png");
       background-repeat: no-repeat;
       background-position: center;
-      transform: translate3d(-2px, 2px, 0);
+      transform: translate3d(-1px, 1px, 0);
+      transition: left 0.2s, top 0.2s;
       padding-top: 10%;
     }
 
@@ -78,8 +79,6 @@
     }
   }
 }
-
-// Main container styles
 
 .service-content {
   color: $secondary-color;
@@ -137,8 +136,9 @@
   background-size: cover;
   background-image: url(https://wp-themes.com/wp-content/themes/hestia/assets/img/contact.jpg);
   width: 100%;
-  height: 50vh;
+  height: 60vh;
   z-index: 2;
+  margin-bottom: -15%;
 
   .touch-content {
     @include flex-row(column, center, flex-start);

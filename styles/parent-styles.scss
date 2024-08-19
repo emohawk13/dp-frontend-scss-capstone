@@ -1,23 +1,24 @@
-@import 'mixins';
-@import 'color';
+@import "mixins";
+@import "color";
 
-p {
+.main-container {
+  margin: 10% auto -12% auto;
+  border-radius: 15px 15px 0 0;
+  p {
     font-size: 1.25rem;
     color: $text-color-3;
-}
+  }
 
-.user-section {
+  .user-section {
     @include flex-row(column, center, center);
     width: inherit;
-}
-
-
-.smiley {
+  }
+  .smiley {
     @include flex-row(row);
     img {
-        padding: 2%;
-        border-radius: 50%;
-        width: 10%;
+      padding: 2%;
+      border-radius: 50%;
+      width: 10%;
     }
+  }
 }
-

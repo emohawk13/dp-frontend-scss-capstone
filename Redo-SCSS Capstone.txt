@@ -1,0 +1,24 @@
+HTML navigates to the proper places. HTML structure is implemented with foundational knowledge. class names, and nesting in scss file matches the html files' structures. Here are a few considerations:
+
+1. Use the hestia template as a design template. Double check the spacing between words, sections, images, etc. throughout all pages.
+
+2. The requirement does ask for mobile view. Though the mobile does not need to match the mobile design that hestia provides, all containers and sections should hold their elements nicely. Please check on the various pages in mobile view (use the inspect tools), and use media queries.
+
+3. Check for the effects that happen on certain buttons. Some have a hover effect, a  click effect, etc. Have as many of those added as you can find.
+
+4. It is tempting to use margin to create space between elements. However, this should be an absolute last result and should be used in ways that don't cause side-effects to other elements. It is best to always try to leverage flexbox and grid as well. Padding, floats, clears, etc. can also be better than using margin. Let me know if you have any questions.
+
+5. The capstone requires three completed pages. I only count the blog and home page. Please complete another page of your choosing for the capstone.
+
+After you have refactored the following send me a message through slack and I will re-grade. This is a large assignment, so do not be afraid of submitting twice, even three times. You got this.
+
+center header
+
+keep meda basic very basic
+
+easier way to hover, :cursor use then :pointer
+
+horazontal scroll, from prossiably header & hero
+
+
+.other layer -- 

@@ -1,11 +1,30 @@
+@import "mixins";
 @import "color";
 
 @each $key, $color in $blog-colors {
-  .post-container:nth-child(#{$key}) h4.blog-color {
+  .post-item:nth-child(#{$key}) h4.blog-color {
     color: $color;
   }
 }
 
 a {
   color: $a-text-color-1;
+}
+
+.post-content-tags {
+  @include flex-row(column, center, center);
+  width: 80%;
+
+  .post-container {
+    @include flex-row(row, center, center);
+    gap: 10px;
+    .post-item {
+      @include flex-row(column, flex-start, flex-start);
+      background-color: $primary-color;
+      height: 350px;
+      padding: 5% 2% 2% 5%;
+      width: 80%;
+      margin-bottom: 2%;
+    }
+  }
 }

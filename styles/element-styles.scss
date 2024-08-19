@@ -1,50 +1,71 @@
-@import 'color';
-@import 'mixins';
+@import "color";
+@import "mixins";
 
 .main-container {
-    .content-other-page {
-        h3:first-child{
-            font-weight: 100;
-        }
-        .line {
-            padding-top: 2%;
-            width: 100%;
-            background-color: transparent;
-            border-bottom: 1px solid $secondary-color;
-        }
-        p {
-            font-weight: 100;
-            color: $text-color-3;
-        }
-        a {
-            color: $a-text-color-1;
-        }
+  margin: 20% auto -10% auto;
+  border-radius: 15px 15px 0 0;
+  .content-other-page {
+    h3:first-child {
+      font-weight: 100;
     }
+    .line {
+      padding-top: 2%;
+      width: 100%;
+      background-color: transparent;
+      border-bottom: 1px solid $secondary-color;
+    }
+    p {
+      font-weight: 100;
+      color: $text-color-3;
+    }
+    a {
+      color: $a-text-color-1;
+    }
+  }
 }
 
 form {
-    padding: 1%;
-    fieldset{
-        @include flex-row(column, flex-start, flex-start);
-        border: none;
+  padding: 1%;
+  fieldset {
+    @include flex-row(column, flex-start, flex-start);
+    border: none;
+  }
+  .text {
+    @include flex-row(column, flex-start, flex-start);
+    padding-bottom: 1%;
+    width: 90%;
+    input,
+    textarea {
+      border: none;
+      background-color: inherit;
+      border-bottom: 1px black solid;
+      width: 80%;
     }
-    .text {
-        @include flex-row(column, flex-start, flex-start);
-        padding-bottom: 1%;
-        width: 90%;
-        input, textarea {
-            border: none;
-            background-color: inherit;
-            border-bottom: 1px black solid;
-            width: 80%;
-        }
+  }
+  table {
+    width: 100%;
+    td,
+    th {
+      font-size: 1.25rem;
+      border-bottom: 1px black solid;
     }
+  }
 }
 
-table {
-    width: 100%;
-    td, th {
-        font-size: 1.25rem;
-        border-bottom: 1px black solid;
+.post-content {
+  @include flex-row(column, center, center);
+  width: 80%;
+  margin-top: -15%;
+  .post-container {
+    @include flex-row(row, center, center);
+    gap: 10px;
+    .post-item {
+      @include flex-row(column, flex-start, flex-start);
+      background-color: $primary-color;
+      height: 350px;
+      padding: 5% 2% 2% 5%;
+      width: 80%;
+      margin-bottom: 2%;
     }
+  }
 }

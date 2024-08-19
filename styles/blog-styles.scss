@@ -7,11 +7,12 @@
 }
 
 .main-container {
-    h2 > a {
-        text-decoration: none;
-        color: $text-color-2;
-    }
-    border-radius: 15px 15px 0 0;
+  margin: 10% auto -17% auto;
+  border-radius: 15px 15px 0 0;
+  h2 > a {
+    text-decoration: none;
+    color: $text-color-2;
+  }
   .content-other-page {
     .blog-color {
       font-size: 0.75rem;
