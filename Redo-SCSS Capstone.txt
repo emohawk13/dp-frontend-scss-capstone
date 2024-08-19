@@ -12,13 +12,11 @@ HTML navigates to the proper places. HTML structure is implemented with foundati
 
 After you have refactored the following send me a message through slack and I will re-grade. This is a large assignment, so do not be afraid of submitting twice, even three times. You got this.
 
+
+advice from Jake
 center header
 
-keep meda basic very basic
+keep media basic very basic
 
 easier way to hover, :cursor use then :pointer
 
-horazontal scroll, from prossiably header & hero
-
-
-.other layer -- 
